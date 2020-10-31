@@ -4,7 +4,7 @@ import numpy as np
 
 
 #input is a data frame and a string value of the IP address of the system that is being attacked 
-def EightFeatureExtraction(df_input, HomeIP):
+def FeatureExtraction(df_input, HomeIP):
     #time delta. 
     T = 1
     feature_calculated = ['srcport','dstport','Inbound','Land','Oneway','OnewayRatio','AverageLengthIPFlow','RatioofInOut',
@@ -210,7 +210,7 @@ tshark -r packet1.pcap -T fields -e frame.number -e frame.time_epoch -e ip.src -
 '''
  #replace csv
 HomeIP = '192.168.1.151' #replace IP
-df1 = EightFeatureExtraction(file, HomeIP)
+df1 = FeatureExtraction(file, HomeIP)
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
