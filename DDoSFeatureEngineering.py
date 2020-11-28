@@ -209,7 +209,7 @@ tshark -r packet1.pcap -T fields -e frame.number -e frame.time_epoch -e ip.src -
 
 '''
  #replace csv
-HomeIP = '192.168.1.151' #replace IP
+HomeIP = '' #replace IP
 df1 = FeatureExtraction(file, HomeIP)
 
 pd.set_option('display.max_columns', None)
