@@ -1,6 +1,6 @@
 # InternetTrafficFeatureEngineering-Tool
 
-A script that can be used to engineer advanced features from live internet traffic extracted Wireshark data.
+A script that can be used to engineer advanced features from live internet traffic extracted from Wireshark.
 
 Feature engineering for various internet protocols in their associated connections has proven to be a difficult task, though some solutions have been developed there are few compatible for use directly with the python language. 
 
