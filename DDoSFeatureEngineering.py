@@ -204,7 +204,7 @@ file = pd.read_csv("benignHome2.csv")
 file.info()
 
 '''
-fields needed to be pulled from tshark to be ablt to exicute the script
+fields needed to be pulled from tshark to be able to execute the script
 tshark -r packet1.pcap -T fields -e frame.number -e frame.time_epoch -e ip.src -e ip.dst -e ip.proto -e ip.len -e tcp.srcport -e tcp.dstport -e udp.srcport -e udp.dstport -e icmp.type -e tcp.flags -e tcp.flags.urg -e tcp.flags.fin -e tcp.flags.ack -e tcp.flags.syn -e tcp.flags.push -e tcp.flags.reset -E header=y -E separator=, -E quote=d > test.csv
 
 '''
