@@ -200,23 +200,34 @@ def FeatureExtraction(df_input, HomeIP):
     
     return df  
 
-file = pd.read_csv("benignHome2.csv")
-file.info()
+
 
 '''
 fields needed to be pulled from tshark to be able to execute the script
 tshark -r packet1.pcap -T fields -e frame.number -e frame.time_epoch -e ip.src -e ip.dst -e ip.proto -e ip.len -e tcp.srcport -e tcp.dstport -e udp.srcport -e udp.dstport -e icmp.type -e tcp.flags -e tcp.flags.urg -e tcp.flags.fin -e tcp.flags.ack -e tcp.flags.syn -e tcp.flags.push -e tcp.flags.reset -E header=y -E separator=, -E quote=d > test.csv
 
 '''
- #replace csv
-HomeIP = '' #replace IP
-df1 = FeatureExtraction(file, HomeIP)
+'''
+Can be run as stand alone in IDE if files are local, this is useful for testing locally with out the need to run or set up whole pipeline
+'''
+#  #replace csv
+# file = pd.read_csv("benignHome2.csv")
+# file.info()
+# HomeIP = '' #replace IP
+# df1 = FeatureExtraction(file, HomeIP)
 
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-print(df1.head())
+# pd.set_option('display.max_columns', None)
+# pd.set_option('display.max_rows', None)
+# print(df1.head())
 
 
-#set outputfile below
-file = "set path"
-df1.to_csv(file, index = False, header=True)
+# #set outputfile below
+# file = "set path"
+# df1.to_csv(file, index = False, header=True)
+
+'''
+Or use funtion as import
+'''
+def get_features(dataframe,homeip)
+    return FeatureExtraction(file, HomeIP)
+    
